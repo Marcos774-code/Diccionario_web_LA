@@ -1,0 +1,9 @@
+﻿id,word,definition,created_at
+1,algorithm,Conjunto ordenado de operaciones sistemáticas que permite hacer un cálculo y hallar la solución de un tipo de problemas.,15/01/2024 10:30
+2,database,Colección de datos organizados de manera que puedan ser almacenados y accedidos electrónicamente.,15/01/2024 10:35
+3,programming,"Proceso de diseñar, codificar, depurar y mantener el código fuente de programas computacionales.",15/01/2024 10:40
+4,variable,"Espacio de memoria identificado con un nombre, que almacena un valor que puede cambiar durante la ejecución.",15/01/2024 10:45
+5,function,Secuencia de instrucciones que realiza una tarea específica y que puede ser reutilizada en un programa.,15/01/2024 10:50
+6,loop,Estructura de control que repite un bloque de código mientras se cumple una condición determinada.,15/01/2024 10:55
+7,array,Colección ordenada de elementos del mismo tipo a los que se accede mediante un índice.,15/01/2024 11:00
+8,object,Entidad que combina estado (datos) y comportamiento (métodos) en programación orientada a objetos.,15/01/2024 11:05

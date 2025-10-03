@@ -1,0 +1,211 @@
+/* Archivo: styles.css */
+/* Propósito: Estilos CSS para el diccionario web. */
+/* Autor: Blackbox AI Assistant */
+/* Fecha: 2024-01-15 */
+
+/* ----------------------------------------------------- */
+/* 1. Reset Básico */
+/* ----------------------------------------------------- */
+/* Un reset ligero para asegurar una consistencia básica entre navegadores. */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; /* Tipografía clara y legible */
+    line-height: 1.6;
+    background-color: #f8fafc; /* Fondo claro */
+    color: #334155; /* Texto principal oscuro */
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+    display: flex;
+    flex-direction: column; /* Para que el footer se pegue abajo */
+}
+
+/* ----------------------------------------------------- */
+/* 2. Layout General */
+/* ----------------------------------------------------- */
+.header {
+    background-color: #2563eb; /* Acento azul */
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.main-content {
+    flex-grow: 1; /* Permite que el contenido principal ocupe el espacio restante */
+    padding: 2rem 1rem;
+    max-width: 960px; /* Ancho máximo para el contenido */
+    margin: 0 auto; /* Centrar el contenido */
+    width: 100%;
+}
+
+.footer {
+    background-color: #e2e8f0; /* Fondo claro para el footer */
+    color: #64748b;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    border-top: 1px solid #cbd5e1;
+}
+
+/* ----------------------------------------------------- */
+/* 3. Componentes: Formulario de Búsqueda */
+/* ----------------------------------------------------- */
+.search-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem; /* Espacio entre input y botón */
+    flex-wrap: wrap; /* Para responsive en pantallas pequeñas */
+}
+
+.search-input {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.1rem;
+    border: 2px solid #cbd5e1;
+    border-radius: 0.5rem;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 400px; /* Ancho máximo para el input */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #2563eb; /* Borde azul al enfocar */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2); /* Sombra suave */
+}
+
+.search-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    background-color: #2563eb; /* Acento azul */
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex-shrink: 0; /* Evita que el botón se encoja */
+}
+
+.search-button:hover {
+    background-color: #1d4ed8; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-1px); /* Efecto ligero de elevación */
+}
+
+.search-button:active {
+    background-color: #1e40af; /* Azul aún más oscuro al hacer clic */
+    transform: translateY(0);
+}
+
+/* ----------------------------------------------------- */
+/* 4. Componentes: Tarjetas de Resultados */
+/* ----------------------------------------------------- */
+.results-section {
+    margin-top: 2rem;
+}
+
+.info-message {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #e0f2fe; /* Fondo azul claro para mensajes informativos */
+    color: #0c4a6e;
+    border-left: 5px solid #38bdf8;
+    border-radius: 0.5rem;
+}
+
+.error-message {
+    background-color: #fee2e2; /* Fondo rojo claro para mensajes de error */
+    color: #991b1b;
+    border-left: 5px solid #ef4444;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+    gap: 1.5rem; /* Espacio entre tarjetas */
+}
+
+.result-card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Sombras sutiles */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja la distancia al final */
+}
+
+.result-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result-word {
+    font-size: 1.5rem;
+    color: #1e3a8a; /* Azul oscuro para la palabra */
+    margin-bottom: 0.5rem;
+    font-weight: bold; /* Palabra en negrita */
+}
+
+.result-definition {
+    font-size: 1rem;
+    color: #475569;
+    margin-bottom: 1rem;
+}
+
+.result-distance {
+    font-size: 0.85rem;
+    color: #6b7280;
+    background-color: #e0e7ff; /* Fondo suave para la distancia */
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.3rem;
+    align-self: flex-end; /* Alinea la distancia a la derecha inferior */
+}
+
+/* ----------------------------------------------------- */
+/* 5. Responsive Design (Mobile-first) */
+/* ----------------------------------------------------- */
+
+/* Ya se ha aplicado un enfoque mobile-first con anchos del 100% y flex-wrap.
+   Aquí se pueden añadir ajustes para pantallas más grandes si es necesario. */
+
+@media (min-width: 600px) {
+    .header-title {
+        font-size: 3rem;
+    }
+
+    .search-form {
+        flex-wrap: nowrap; /* Evita que el input y botón se envuelvan en pantallas más grandes */
+    }
+
+    .search-input {
+        width: auto; /* Permite que el input tenga su max-width */
+    }
+}
+
+@media (min-width: 900px) {
+    .main-content {
+        padding: 3rem 1rem;
+    }
+
+    .header-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* Fin del archivo styles.css */
